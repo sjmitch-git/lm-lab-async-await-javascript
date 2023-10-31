@@ -19,3 +19,14 @@ promise
   .catch((error) => {
     console.error("Boo. Promise rejected with response: " + error);
   });
+
+const getPromiseResponse = async () => {
+  try {
+    const response = await promise;
+    console.log("Async/Await: Yay! Promise resolved with response: " + response);
+  } catch (error) {
+    console.error("Async/Await: Boo. Promise rejected with response: " + error);
+  }
+};
+
+getPromiseResponse();
